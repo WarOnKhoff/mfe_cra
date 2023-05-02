@@ -1,0 +1,82 @@
+.header_container {
+    width: 100%;
+    height: 200px;
+    border-bottom: 2px solid #eee;
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    justify-content: space-between;
+}
+.header_container_light {
+    background-color: #FFF;
+    border-bottom: 2px solid #eee;
+}
+.header_container_dark {
+    background-color: #333;
+    border-bottom: 2px solid #000000;
+}
+
+.city_input {
+ font-family: inherit;
+  width: 180px;
+  border: 0;
+  border-bottom: 2px solid #a8aeff;
+  outline: 0;
+  font-size: 1.5rem;
+  color: #333;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  margin-right: 40px;
+}
+.city_input_dark {
+  color: #FFF;
+  border-bottom: 2px solid #FFF;
+}
+.city_input_light {
+  color: #333;
+  border-bottom: 2px solid #333;
+}
+
+
+.default_button {
+  background-color: #eee;
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 150px;
+}
+
+.toggle_btn {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.toggle_btn {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+}
+.toggle_btn_icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
+
+}
