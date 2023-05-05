@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import "./index.css"
-import useLocalStorage from "../../hooks/useLocalStorage"
 import { useAppContext } from "../../store"
 
 const getIconUrl = (theme) =>

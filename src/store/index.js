@@ -1,11 +1,13 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext } from "react"
+import useLocalStorage from "../hooks/useLocalStorage"
 
 export const AppContext = createContext({})
 
+const API_KEY = "304090ed092c4b3cbf0141340230105"
 export const AppContextProvider = ({ children }) => {
-	const [theme, setTheme] = useState("light")
-	const [cities, setCities] = useState([])
-	const [selectedCity, setSelectedCity] = useState(null)
+	const [theme, setTheme] = useLocalStorage("theme", "light")
+	const [cities, setCities] = useLocalStorage("cities", ["Riga"])
+	const [selectedCity, setSelectedCity] = useLocalStorage("selected", "Riga")
 
 	const toggleTheme = () =>
 		setTheme((prev) => (prev === "dark" ? "light" : "dark"))
@@ -18,11 +20,21 @@ export const AppContextProvider = ({ children }) => {
 		})
 	}
 	const removeCity = (city) => {
-		if (city.toLowerCase() === selectedCity.toLowerCase()) setSelectedCity(null)
+		if (selectedCity && city.toLowerCase() === selectedCity.toLowerCase())
+			setSelectedCity(null)
 
 		setCities((prev) => {
-			return prev.filter((prevCity) => prevCity !== city.toLowerCase())
+			return prev.filter(
+				(prevCity) => prevCity.toLowerCase() !== city.toLowerCase()
+			)
 		})
+	}
+
+	const fetchWeatherData = async (cityName) => {
+		const response = await fetch(
+			`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=5&aqi=no&alerts=no`
+		)
+		return await response.json()
 	}
 
 	const value = {
@@ -32,7 +44,8 @@ export const AppContextProvider = ({ children }) => {
 		toggleTheme,
 		addCity,
 		removeCity,
-		setSelectedCity
+		setSelectedCity,
+		fetchWeatherData
 	}
 	return <AppContext.Provider value={value}>{children}</AppContext.Provider>
 }
