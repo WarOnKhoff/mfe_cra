@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mfe_cra/static/css/main.20bf40c8.css",
+    "main.js": "/mfe_cra/static/js/main.42ee96d5.js",
+    "index.html": "/mfe_cra/index.html",
+    "main.20bf40c8.css.map": "/mfe_cra/static/css/main.20bf40c8.css.map",
+    "main.42ee96d5.js.map": "/mfe_cra/static/js/main.42ee96d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20bf40c8.css",
+    "static/js/main.42ee96d5.js"
+  ]
+}
