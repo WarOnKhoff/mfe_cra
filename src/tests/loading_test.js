@@ -4,7 +4,8 @@ import { sleep, check } from "k6"
 export const options = {
 	insecureSkipTLSVerify: true,
 	noConnectionReuse: false,
-	stages: [{ duration: "30s", target: 5 }]
+	vus: 5000,
+	duration: "30s"
 }
 
 // Test configuration
@@ -23,7 +24,7 @@ export const options = {
 
 // Simulated user behavior
 export default function () {
-	let res = http.get("http://localhost:8080/")
+	let res = http.get("https://waronkhoff.github.io/mfe_wmf_host/")
 	// Validate response status
 	check(res, { "status was 200": (r) => r.status == 200 })
 	sleep(1)
