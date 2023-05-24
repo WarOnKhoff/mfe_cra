@@ -3,7 +3,7 @@ import useLocalStorage from "../hooks/useLocalStorage"
 
 export const AppContext = createContext({})
 
-const API_KEY = "304090ed092c4b3cbf0141340230105"
+const API_KEY = "f018453c03bd48f898d145316232305"
 export const AppContextProvider = ({ children }) => {
 	const [theme, setTheme] = useLocalStorage("theme", "light")
 	const [cities, setCities] = useLocalStorage("cities", ["Riga"])
@@ -32,7 +32,7 @@ export const AppContextProvider = ({ children }) => {
 
 	const fetchWeatherData = async (cityName) => {
 		const response = await fetch(
-			`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=5&aqi=no&alerts=no`
+			`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=14&aqi=no&alerts=no`
 		)
 		return await response.json()
 	}
