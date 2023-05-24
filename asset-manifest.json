@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/mfe_cra/static/css/main.20bf40c8.css",
-    "main.js": "/mfe_cra/static/js/main.cb90f42b.js",
+    "main.js": "/mfe_cra/static/js/main.735ac125.js",
     "index.html": "/mfe_cra/index.html",
     "main.20bf40c8.css.map": "/mfe_cra/static/css/main.20bf40c8.css.map",
-    "main.cb90f42b.js.map": "/mfe_cra/static/js/main.cb90f42b.js.map"
+    "main.735ac125.js.map": "/mfe_cra/static/js/main.735ac125.js.map"
   },
   "entrypoints": [
     "static/css/main.20bf40c8.css",
-    "static/js/main.cb90f42b.js"
+    "static/js/main.735ac125.js"
   ]
 }
